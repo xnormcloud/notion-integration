@@ -19,6 +19,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm i
-    - if: ${{ github.ref_name }} == master
+    - if: ${{ github.ref_name }} == "master"
       name: production restart
       run: pm2 restart NotionLibServer
