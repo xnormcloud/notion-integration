@@ -1,0 +1,21 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master, develop, test ]
+
+jobs:
+  build:
+
+    runs-on: [self-hosted, linux, x64, "${{ github.ref_name }}"]
+    strategy:
+      matrix: 
+        node-version: [16.x]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm i
