@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon ./src/app.js -t",
+    "dev": "nodemon ./src/app.js",
+    "prod": "node ./src/app.js -p"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@notionhq/client": "^1.0.4",
-    "dotenv": "^16.0.1"
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
   }
 }

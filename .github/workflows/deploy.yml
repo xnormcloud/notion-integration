@@ -19,3 +19,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm i
+    - name: production run
+      if: ${{ github.ref_name }} == master
+      run: npm run prod
+    - name: develop run
+      if: ${{ github.ref_name }} == develop 
+      run: npm run dev
+    - name: test run
+      if: ${{ github.ref_name }} == test
+      run: npm run test
