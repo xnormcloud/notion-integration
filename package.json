@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon ./src/app.js -t",
-    "dev": "nodemon ./src/app.js",
-    "prod": "node ./src/app.js -p"
+    "test": "nodemon index.js -t",
+    "dev": "nodemon index.js",
+    "prod": "node index.js -p"
   },
   "keywords": [],
   "author": "",
