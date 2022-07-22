@@ -2,17 +2,18 @@
   "name": "notion-api-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "nodemon index.js -test",
-    "dev": "nodemon index.js -dev",
-    "prod": "pm2 start --name=NotionLibServer index.js"
+    "test": "nodemon ./src/app.js -test",
+    "dev": "nodemon ./src/app.js -dev",
+    "prod": "pm2 start --name=NotionLibServer ./src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@notionhq/client": "^1.0.4",
+    "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
