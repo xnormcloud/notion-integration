@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "nodemon index.js -t",
-    "dev": "nodemon index.js",
-    "prod": "node index.js -p"
+    "dev": "nodemon index.js -d",
+    "prod": "pm2 start --name=NotionLibServer index.js"
   },
   "keywords": [],
   "author": "",
