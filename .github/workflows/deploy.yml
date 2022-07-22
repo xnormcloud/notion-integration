@@ -19,6 +19,5 @@ jobs:
         cache: 'npm'
     - run: npm i
     - if: github.ref == 'refs/heads/master'
-      steps:
-        - name: production restart
-        - run: pm2 restart NotionLibServer
+        name: production restart
+        run: pm2 restart NotionLibServer
