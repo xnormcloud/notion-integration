@@ -4,7 +4,7 @@ const colors = require('colors');
 const path = require('path');
 const app = express();
 const arguments = process.argv[2];
-const PORT = arguments == "-t" ? 7000 : arguments == "-d" ? 8000 : 6026;
+const PORT = arguments == "-test" ? 7000 : arguments == "-dev" ? 8000 : 6026;
 
 app.get('/:apikey', async(req, res) => {
     if (req.params.apikey != process.env.APIKEY) return res.sendStatus(403)
