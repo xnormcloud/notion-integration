@@ -116,7 +116,7 @@ module.exports = {
                 },
             },
         });
-        if (groupsInUser.results.length !== 1) return { UserId: discordId, Username: undefined, Groups: [] };
+        if (groupsInUser.results.length !== 1) return [];
         const groupsInUserIds = groupsInUser.results[0].properties.Servers.relation.map(group => {
             return group.id.replace(/-/ig, '');
         });
